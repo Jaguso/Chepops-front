@@ -2,22 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Chep Ops</title>
+    <title>Chepops</title>
     <link href="index.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <div class="container">
       <h1>Registra tu cuenta de Heroku</h1>
-      <form>
+      <form method="post" action="https://4ed21e24.ngrok.io/createUser" name="myForm" target="hiddenFrame">
         <div class="inner-wrap">
           <label for="name" class="labels">Nombre<input type="text" name="name" required/></label><br/>
           <label for="email" class="labels">Email<input type="email" name="email" required/></label><br/>
-          <label for="token" class="labels">Heroku API TOKEN<input type="text" name="token" required/></label><br/>
+          <label for="token" class="labels">Heroku API TOKEN<input type="text" name="herokuapi" required/></label><br/>
         </div>
         <div>
           <input type="submit" name="SignUp" />
         </div>   
       </form>
+      <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
     </div>
   </body>
 </html>
